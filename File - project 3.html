@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Now</title>
+    <style>
+      body {
+        /*property:value;*/
+        color: white;
+        background: rgba(255, 190, 0, 0.3);
+      }
+      h1 {
+        background-color: white;
+        color: black;
+        width: 40%;
+        border-radius: 10px;
+        padding: 5px;
+      }
+      form {
+        display: block;
+        width: 50%;
+        margin: 0px auto;
+        background: white;
+        color: black;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      .input {
+        width: 90%;
+        padding: 10px 5%;
+        border-radius: 10px;
+        height: 20px;
+        border: 1px solid black;
+      }
+      .select {
+        height: 40px;
+      }
+      .label {
+        display: block;
+        font-size: 10px;
+        padding: 10px;
+      }
+      .navbar {
+        background: #fff;
+        height: auto;
+        width: 50%;
+        margin: 20px auto;
+        border-radius: 10px;
+      }
+      ul {
+        color: #000;
+        list-style: none;
+        display: flex;
+        width: 100%;
+        margin-left: -30px;
+      }
+      li > a {
+        display: block;
+        padding: 10px 15px;
+        color: #000;
+        text-decoration: none;
+      }
+      li > a:hover,
+      .active {
+        background: #000;
+        color: #fff;
+        border-radius: 10px;
+      }
+      button {
+        border-radius: 10px;
+        border: none;
+        background: #000;
+        color: #fff;
+        margin-top: 10px;
+        width: 90%;
+        height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="register.html" class="active">Register</a></li>
+      </ul>
+    </div>
+    <center>
+      <h1>Register Now</h1>
+    </center>
+    <form action="process.php" method="post">
+      <label class="label">Full name</label>
+      <input type="text" name="fullname" required class="input" />
+      <label class="label">Email</label>
+      <input type="email" name="email" required class="input" />
+      <label class="label">Password</label>
+      <input type="password" name="password" required class="input" />
+      <label class="label">Date of birth</label>
+      <input type="date" name="dob" required class="input" />
+      <label class="label">Gender</label>
+      <input type="radio" name="gender" value="Female" /> Female
+      <input type="radio" name="gender" value="Male" /> Male
+      <label class="label">State of Origin</label>
+      <select name="state" class="input select">
+        <option>--Select--</option>
+        <option value="Lagos">Lagos</option>
+        <option value="FCT">FCT</option>
+      </select>
+      <label class="label">Hobbies</label>
+      <textarea name="hobbies" class="input"></textarea>
+      <label class="label">Upload your profile picture</label>
+      <input type="file" name="profile_picture" class="input" />
+      <input type="checkbox" name="terms" required /> I agree to the terms and
+      conditions
+      <button type="submit">Register</button>
+      <button type="reset">Reset</button>
+      <button type="button" onclick="window.alert('I go slap you oo')">
+        talk
+      </button>
+    </form>
+    <a href="#">Back to top</a>
+  </body>
+</html>
