@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Now</title>
+    <style>
+        body{
+            /*property:value;*/
+        color:white;
+        background: rgba(255,190,0,0.8);
+        }
+        h1{
+           background-color: white;
+            color:black;
+            width: 40%;
+            border-radius: 10px;
+            padding: 5px;
+        }
+        form{
+          display:block;
+          width:50%;
+          margin: 0px auto; 
+          background: white;
+          color: black;
+          padding: 5px;
+          border-radius: 10px;
+        }
+        .input{
+            width: 90%;
+            padding:5px
+            border- radius 10px;
+            height:20px ;
+            border-radius: 1px solid black;
+        }
+        .label{
+         display: block;
+         font-size: 20px;
+         padding:10px;
+         margin:10px;
+         border:1px dotted red;
+        }
+        .navbar{
+            background: #fff;
+            height: auto;
+            width: 50%;
+            background: #000;
+            color: #fff;
+            margin-top: 10px;
+            width: 90px;
+            height: 30px;
+        }
+     </style>
+</head>
+<body>
+    <div class="navbar">
+      <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="aboutus.html">about us</a></li>
+        <li><a href="contactus.html">contact us</a></li>
+        <li><a href="register.html" class="active">Register</a></li>   
+    </ul>  
+    </div>
+    <center>
+   <h1>Register Now</h1>
+    </center>
+    <form action="process.php" method="post">
+        <label class="label">full name</label>
+        <input type="text" name="fullname" required class="input">
+        <label class="label">email</label>
+        <input type="email" name="email" required class="input">
+        <label class="label">password</label>
+        <input type="password" name="password" required class="input"/>
+        <label class="label">Date of birth</label>
+        <input type="date" name="dob" required class="input">
+        <label class="label">Gender</label><br><br>
+        <input type="radio" name="gender" value="male" /> male
+        <input type="radio" name="gender" value="female" /> female
+        <label>State of Origin</label><br><br>
+        <select name="state">
+            <option>--Select--</option>
+            <option value="FCT">FCT</option>
+            <option value="LAGOS">LAGOS</option>
+        </select>
+        <label>Hobbies</label><br>
+        <textarea name="hobbies"></textarea>
+        <label>upload your profile picture</label>
+        <input type="file" name="profile_picture" class="input" />
+        <input type="checkbox" name="terms" required /> I agree to the terms and conditions<br /><br />
+        <button type="submit">Register</button>
+        <button type="reset">Reset</button>
+        <button type="button" onclick="window.alert('I go slap u oo')">talk</button>
+    </form>
+    <a href="#">Back to top</a>
+</body>
+</html>
